@@ -1,0 +1,396 @@
+<html>
+    <head>
+        <title>Schema Report for database: airport_db</title>
+        <style>
+            @import url('http://fonts.cdnfonts.com/css/product-sans');
+            * {
+                font-family: 'Product Sans', sans-serif;
+                /* margin: 10px; */
+                /* padding: 10px; */
+            }
+
+            td,th {
+            text-align:left;
+            vertical-align:middle;
+            }
+            table {
+            border-collapse: collapse;
+            border: 1px solid;
+            }
+            caption, th, td {
+            padding: .2em .8em;
+            border: 1px solid #000000;
+            }
+            caption {
+            background: #D3D3D3;
+            font-weight: bold;
+            font-size: 1.1em;
+            }
+            th {
+            font-weight: bold;
+            background: #101010;
+            color: white;
+            }
+            td {
+            background: #FFFFFF;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Data dictionary for database: airport_db</h1>
+        <h4>&nbsp;by Juan Pablo Enriquez, Ulises Gallardo and Paty Lopez</h3>
+        <br/>
+        <!-- <a id="home">Table List </a><br />  -->
+        
+        <ul>
+        <li><a href="#airports">airports </a></li>
+        <li><a href="#flights">flights </a></li>
+        <li><a href="#passengers">passengers </a></li>
+        <li><a href="#tickets">tickets </a></li>
+        </ul>
+        <br/>
+        
+        <table style="width:100% ">
+            <caption>Table: airports </caption>
+            <tr>
+                <td>Table Comments</td>
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td colspan="7">Columns</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Data Type</th>
+                <th>Not Null</th>
+                <th>PK</th>
+                <th>FK</th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>iata_code</td>
+                <td>VARCHAR(50)</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>VARCHAR(255)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>city</td>
+                <td>VARCHAR(255)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>state</td>
+                <td>VARCHAR(255)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>address</td>
+                <td>VARCHAR(255)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>phone_number</td>
+                <td>VARCHAR(20)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <!-- <a href="#home">Table List </a> -->
+        </br></br>
+        <a id="flights"></a>
+        <table style="width:100%">
+            <caption>Table: flights </caption>
+            <tr>
+                <td>Table Comments</td>
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td colspan="7">Columns</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Data Type</th>
+                <th>Not Null</th>
+                <th>PK</th>
+                <th>FK</th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>flight_id</td>
+                <td>INT</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>airline</td>
+                <td>ENUM('Hawaiian Airlines', 'United Airlines', 'Viva Aerobus', 'Aeromexico', 'Air New Zealand')</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>departure</td>
+                <td>DATETIME</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>arrival</td>
+                <td>DATETIME</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>duration_min</td>
+                <td>INT</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>distance_km</td>
+                <td>INT</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>departure_airport_id</td>
+                <td>VARCHAR(50)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>arrival_airport_id</td>
+                <td>VARCHAR(50)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <!-- <a href="#home">Table List </a> -->
+        </br></br>
+
+        <a id="passengers"></a>
+        <table style="width:100%">
+            <caption>Table: passengers </caption>
+            <tr>
+                <td>Table Comments</td>
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td colspan="7">Columns</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Data Type</th>
+                <th>Not Null</th>
+                <th>PK</th>
+                <th>FK</th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>passenger_id</td>
+                <td>INT</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>first_name</td>
+                <td>VARCHAR(255)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>last_name</td>
+                <td>VARCHAR(255)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td>INT</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>curp</td>
+                <td>VARCHAR(20)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>address</td>
+                <td>VARCHAR(255)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>phone_number</td>
+                <td>VARCHAR(20)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>sex</td>
+                <td>ENUM('male', 'female', 'intersex')</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <!-- <a href="#home">Table List </a> -->
+        </br></br>
+
+        <a id="tickets"></a>
+        <table style="width:100%">
+            <caption>Table: tickets </caption>
+            <tr>
+                <td>Table Comments</td>
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td colspan="7">Columns</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Data Type</th>
+                <th>Not Null</th>
+                <th>PK</th>
+                <th>FK</th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>ticket_id</td>
+                <td>INT</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>price</td>
+                <td>DOUBLE</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>class</td>
+                <td>ENUM('economy', 'business', 'first')</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>confirmation_number</td>
+                <td>INT</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>passenger_id</td>
+                <td>INT</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>flight_id</td>
+                <td>INT</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <!-- <a href="#home">Table List </a> -->
+        </br></br>
+
+    </body>
+</html>
