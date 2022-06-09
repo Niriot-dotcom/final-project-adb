@@ -28,8 +28,8 @@ VALUES
 INSERT INTO `airport_db`.`tickets`
 (`price`,`class`,`confirmation_number`,`passenger_id`,`flight_id`)
 VALUES
-(1511,'first',1902,4,9),
-(1511,'first',1902,1,9),
-(2197,'business',3671,3,7),
-(3759,'economy',9875,2,11),
-(1547,'economy',3497,5,10);
+(1511,'first',1902,4,3),
+(1511,'first',1902,1,3),
+(2197,'business',3671,3,1),
+(3759,'economy',9875,2,5),
+(1547,'economy',3497,5,4);
